@@ -33,10 +33,10 @@ jobs:
     - name: Build with Gradle
       run: |
         chmod +x gradlew
-        ./gradlew test --debug
+        ./gradlew test
     - name: Upload artifacts
       if: always()
       uses: actions/upload-artifact@v3
       with:
-        name: reports
+        name: ${{ matrix.os }}-reports
         path: build/reports/
