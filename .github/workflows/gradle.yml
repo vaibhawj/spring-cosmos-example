@@ -34,7 +34,7 @@ jobs:
     - name: Build with Gradle
       run: |
         chmod +x gradlew
-        ./gradlew test
+        ./gradlew test --debug
     - name: Upload artifacts
       if: always()
       uses: actions/upload-artifact@v3
